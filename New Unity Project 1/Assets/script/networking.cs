@@ -4,7 +4,7 @@ using System.Collections;
 public class networking : MonoBehaviour {
 
     private string _gameVersion = "0.1";
-    public GameObject SorcererPrefab;
+    public GameObject FinalBaseMesh;
 
     // Use this for initialization
     void Start () {
@@ -33,7 +33,7 @@ public class networking : MonoBehaviour {
     void OnJoinedRoom()
     {
         Debug.Log("succed to join a room");
-        PhotonNetwork.Instantiate ("Prefabs/" + SorcererPrefab.name, SorcererPrefab.transform.position, Quaternion.identity,0);
+        PhotonNetwork.Instantiate ("Prefabs/" + FinalBaseMesh.name, FinalBaseMesh.transform.position, Quaternion.identity,0);
     }
 
 }
